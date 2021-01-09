@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ShapeAppearance.Button.LargeComponent"
+        parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Image.LargeComponent"
+        parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Button.Floating"
+        parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">32dp</item>
+        <item name="cornerRadius">32dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonStyle">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonStyle.Filled"
+        parent="Widget.MaterialComponents.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Button.LargeComponent</item>
+        <item name="iconPadding">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="ButtonStyle.Filled.Large">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAppearance">@style/TextStyle.Subhead</item>
+    </style>
+
+    <style name="ButtonStyle.Filled.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textAppearance">@style/TextStyle.Link2</item>
+    </style>
+
+
+    <style name="ButtonStyle.Outline"
+        parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Button.LargeComponent</item>
+        <item name="strokeColor">@drawable/uikit_button_outline_selector</item>
+        <item name="iconPadding">@dimen/size8</item>
+        <item name="android:paddingLeft">@dimen/size16</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="ButtonStyle.Outline.Large">
+        <item name="android:layout_height">@dimen/size48</item>
+        <item name="android:textAppearance">@style/TextStyle.Subhead</item>
+    </style>
+</resources>
