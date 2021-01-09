@@ -16,10 +16,9 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="18dp" />
-    
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_material_base"
-        style="@style/ButtonStyle.Filled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button Base Theme" />
@@ -45,5 +44,5 @@
         app:icon="@drawable/abc_vector_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button Flat" />
+        android:text="Button Flat + Icon" />
 </LinearLayout>
