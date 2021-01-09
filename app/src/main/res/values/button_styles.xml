@@ -12,6 +12,7 @@
         <item name="iconPadding">8dp</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="iconGravity">textStart</item>
+        <item name="backgroundTint">?colorError</item>
     </style>
 
     <style name="ButtonStyle.Filled.Large">
@@ -40,5 +41,27 @@
     <style name="ButtonStyle.Outline.Large">
         <item name="android:layout_height">48dp</item>
         <item name="android:textAppearance">@style/TextStyle.Subhead</item>
+    </style>
+
+    <style name="ButtonStyle.Flat"
+        parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Button.LargeComponent</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="ButtonStyle.Flat.Large">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAppearance">@style/TextStyle.Subhead</item>
+    </style>
+
+    <style name="ButtonStyle.Flat.Icon">
+        <item name="iconPadding">0dp</item>
+        <item name="android:minWidth">40dp</item>
+        <item name="android:minHeight">40dp</item>
     </style>
 </resources>

@@ -3,7 +3,7 @@
 
     <style name="ShapeAppearance.Button.LargeComponent"
         parent="ShapeAppearance.MaterialComponents.LargeComponent">
-        <item name="cornerFamily">cut</item>
+        <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
         <item name="cornerRadius">32dp</item>
     </style>
