@@ -16,12 +16,12 @@ import androidx.annotation.StyleRes
 import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.core.content.withStyledAttributes
 import androidx.core.view.ViewCompat
-import com.google.android.material.color.MaterialColors
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.MaterialShapeUtils
 import com.google.android.material.shape.ShapeAppearanceModel
 import com.google.android.material.shape.TriangleEdgeTreatment
 import com.example.materialTheme.R
+import com.google.android.material.color.MaterialColors.*
 
 class MapMarker @JvmOverloads constructor(
     context: Context,
@@ -35,15 +35,15 @@ class MapMarker @JvmOverloads constructor(
     private var pointSize: Int = 8.toDp()
 
     private var strokeColor: ColorStateList = ColorStateList.valueOf(
-        MaterialColors.getColor(this, R.attr.colorOnSurface)
+        getColor(this, R.attr.colorOnSurface)
     )
 
     private var fillColor: ColorStateList = ColorStateList.valueOf(
-        MaterialColors.getColor(this, R.attr.colorSurface)
+        getColor(this, R.attr.colorSurface)
     )
 
     private var rippleColor: ColorStateList = ColorStateList.valueOf(
-        MaterialColors.getColor(this, R.attr.colorOnPrimary)
+        getColor(this, R.attr.colorOnPrimary)
     )
 
     init {

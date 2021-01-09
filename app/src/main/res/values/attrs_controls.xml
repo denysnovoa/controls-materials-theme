@@ -18,4 +18,13 @@
         <attr name="badgeIconTint" format="reference|color" />
         <attr name="android:layout_height" format="dimension" />
     </declare-styleable>
+
+    <style name="MapMarker.Favorite"
+        parent="MapMarker">
+        <item name="android:drawableLeft">@drawable/ic_heart_fav</item>
+        <item name="android:drawablePadding">6dp</item>
+        <item name="drawableTint">?colorOnError</item>
+        <item name="android:textColor">?colorOnError</item>
+        <item name="markerFillColor">?colorError</item>
+    </style>
 </resources>
