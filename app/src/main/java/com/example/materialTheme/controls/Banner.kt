@@ -2,24 +2,20 @@ package com.example.materialTheme.controls
 
 import android.content.Context
 import android.content.DialogInterface
-import android.content.res.ColorStateList
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import androidx.annotation.StyleRes
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.withStyledAttributes
 import androidx.core.view.ViewCompat
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.example.materialTheme.R
 import com.example.materialTheme.databinding.ViewBannerBinding
+import com.example.materialTheme.extensions.expand
 import com.example.materialTheme.extensions.getColorFromAttribute
 import com.example.materialTheme.extensions.getDrawableCompat
-import com.example.materialTheme.extensions.expand
 import com.example.materialTheme.extensions.reduce
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.MaterialShapeDrawable
