@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="mapMarkerStyle" />
+
+    <declare-styleable name="MapMarker" parent="MaterialTextView">
+        <attr name="shapeAppearance" format="reference" />
+        <attr name="shapeAppearanceOverlay" format="reference" />
+
+        <attr name="markerPointSize" format="dimension" />
+        <attr name="markerRippleColor" format="color" />
+        <attr name="markerFillColor" format="color" />
+        <attr name="markerStrokeColor" format="color" />
+    </declare-styleable>
+</resources>

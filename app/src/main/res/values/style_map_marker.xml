@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MapMarker"
+        parent="Widget.MaterialComponents.TextView">
+        <item name="shapeAppearance">@style/ShapeAppearance.MapMarker</item>
+        <item name="markerPointSize">8dp</item>
+        <item name="markerStrokeColor">?colorBackground</item>
+        <item name="android:textColor">?colorOnPrimarySurface</item>
+        <item name="markerFillColor">?colorPrimaryVariant</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextStyle.Link2</item>
+    </style>
+
+    <style name="MapMarker.Selected"
+        parent="MapMarker">
+        <item name="android:textColor">?colorSurface</item>
+        <item name="markerFillColor">?colorSecondaryVariant</item>
+    </style>
+
+    <style name="ShapeAppearance.MapMarker"
+        parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+</resources>
