@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/banner_border_background"
+    android:backgroundTint="?colorSurface"
+    tools:layout_height="wrap_content"
+    tools:padding="@dimen/size8"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    >
+
+    <ImageView
+        android:id="@+id/bannerContentIconView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        />
+
+    <TextView
+        android:id="@+id/bannerContentTittleTextView"
+        style="@style/TextStyle.Subhead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size8"
+        android:layout_marginTop="@dimen/size8"
+        android:layout_marginEnd="@dimen/size8"
+        android:textColor="?colorOnErrorSurface"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title"
+        tools:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/bannerContentTextView"
+        style="@style/TextStyle.Subhead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size8"
+        android:textColor="?colorOnErrorSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerContentTittleTextView"
+        tools:text="A new parcel has arrived in your Glue Box, due for delivery on Friday, 18th October"
+        />
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerContentTextView"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bannerLeftButton"
+        style="@style/ButtonStyle.Flat"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toStartOf="@+id/bannerRightButton"
+        app:layout_constraintTop_toBottomOf="@+id/bannerContentTextView"
+        tools:text="No gracias"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bannerRightButton"
+        style="@style/ButtonStyle.Flat"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerContentTextView"
+        tools:text="Entendido"
+        />
+</merge>

@@ -14,6 +14,10 @@
         <item name="colorErrorSurface">@color/palette_red_light</item>
         <item name="colorOnErrorSurface">@color/palette_red_dark</item>
 
+        <item name="colorSuccess">@color/palette_green</item>
+        <item name="colorSuccessSurface">@color/palette_green_light</item>
+        <item name="colorOnSuccessSurface">@color/palette_green_dark</item>
+
         <item name="colorBackground">@color/white</item>
 
         <!-- Status bar color. -->

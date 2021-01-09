@@ -8,6 +8,13 @@
     <attr name="colorOnErrorSurface"
         format="color" />
 
+    <attr name="colorSuccess"
+        format="color" />
+    <attr name="colorSuccessSurface"
+        format="color" />
+    <attr name="colorOnSuccessSurface"
+        format="color" />
+
     <attr name="colorBackground"
         format="color" />
 </resources>

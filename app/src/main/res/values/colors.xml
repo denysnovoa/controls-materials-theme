@@ -12,4 +12,8 @@
     <color name="palette_red_dark">#93220D</color>
     <color name="palette_red_light">#FCEBE8</color>
     <color name="palette_gray_dark">#121212</color>
+
+    <color name="palette_green">#00A544</color>
+    <color name="palette_green_dark">#006B2C</color>
+    <color name="palette_green_light">#E5F5EB</color>
 </resources>
