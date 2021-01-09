@@ -2,12 +2,17 @@ package com.example.materialTheme.controls
 
 import android.content.Context
 import android.content.DialogInterface
+import android.content.res.ColorStateList
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.annotation.StyleRes
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.withStyledAttributes
+import androidx.core.view.ViewCompat
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.example.materialTheme.R
@@ -16,6 +21,9 @@ import com.example.materialTheme.extensions.getColorFromAttribute
 import com.example.materialTheme.extensions.getDrawableCompat
 import com.example.materialTheme.extensions.expand
 import com.example.materialTheme.extensions.reduce
+import com.google.android.material.shape.CornerFamily
+import com.google.android.material.shape.MaterialShapeDrawable
+import com.google.android.material.shape.ShapeAppearanceModel
 
 class Banner @JvmOverloads constructor(
     context: Context,
@@ -65,6 +73,8 @@ class Banner @JvmOverloads constructor(
     init {
         val padding = context.resources.getDimensionPixelSize(R.dimen.size8)
         this.setPadding(padding, padding, padding, padding)
+
+        initBackground(context, attrs, defStyleAttr)
     }
 
     // Meant to avoid multiple dismiss triggers because checking for animation & visibility is not enough
@@ -99,6 +109,24 @@ class Banner @JvmOverloads constructor(
         }
     }
 
+    private fun initBackground(
+        context: Context,
+        attrs: AttributeSet?,
+        defStyleAttr: Int
+    ) {
+        val shapeAppearanceModel = ShapeAppearanceModel.builder(
+            context,
+            attrs,
+            defStyleAttr,
+            0
+        ).setBottomRightCorner(CornerFamily.ROUNDED, dpToPx(16).toFloat())
+            .setBottomLeftCorner(CornerFamily.ROUNDED, dpToPx(16).toFloat())
+            .build()
+
+        val materialDrawable = MaterialShapeDrawable(shapeAppearanceModel)
+        ViewCompat.setBackground(this, materialDrawable)
+    }
+
     class Builder(private val banner: Banner) {
 
         private val context: Context
@@ -122,13 +150,19 @@ class Banner @JvmOverloads constructor(
             return this
         }
 
-        fun withLeftButton(@StringRes leftButtonTextRes: Int, leftButtonAction: (() -> Unit)? = null): Builder {
+        fun withLeftButton(
+            @StringRes leftButtonTextRes: Int,
+            leftButtonAction: (() -> Unit)? = null
+        ): Builder {
             this.leftButtonAction = leftButtonAction
             leftButtonValue = context.getString(leftButtonTextRes)
             return this
         }
 
-        fun withRightButton(@StringRes rightButtonTextRes: Int, rightButtonAction: ((dialog: DialogInterface) -> Unit)? = null): Builder {
+        fun withRightButton(
+            @StringRes rightButtonTextRes: Int,
+            rightButtonAction: ((dialog: DialogInterface) -> Unit)? = null
+        ): Builder {
             this.rightButtonAction = rightButtonAction
             rightButtonValue = context.getString(rightButtonTextRes)
             return this
@@ -143,9 +177,13 @@ class Banner @JvmOverloads constructor(
             banner.apply {
                 titleText = title
                 contentText = message
-                binding.bannerLeftButton.setOnClickListener { leftButtonAction?.invoke() ?: dismiss() }
+                binding.bannerLeftButton.setOnClickListener {
+                    leftButtonAction?.invoke() ?: dismiss()
+                }
                 leftButtonText = leftButtonValue
-                binding.bannerRightButton.setOnClickListener { rightButtonAction?.invoke(banner) ?: dismiss() }
+                binding.bannerRightButton.setOnClickListener {
+                    rightButtonAction?.invoke(banner) ?: dismiss()
+                }
                 rightButtonText = rightButtonValue
                 iconDrawable = icon
             }
@@ -164,7 +202,7 @@ class Banner @JvmOverloads constructor(
 
         private fun applyColor(colorSurfaceId: Int, colorOnSurfaceId: Int) {
             banner.apply {
-                background = context.getDrawableCompat(R.drawable.banner_border_background).apply {
+                background = background.apply {
                     setTint(context.getColorFromAttribute(colorSurfaceId))
                 }
                 context.getColorFromAttribute(colorOnSurfaceId).apply {
