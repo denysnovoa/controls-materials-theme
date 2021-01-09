@@ -201,7 +201,7 @@ class Banner @JvmOverloads constructor(
 
         private fun applyColor(colorSurfaceId: Int, colorOnSurfaceId: Int) {
             banner.apply {
-                background = background.apply {
+                background.apply {
                     setTint(context.getColorFromAttribute(colorSurfaceId))
                 }
                 context.getColorFromAttribute(colorOnSurfaceId).apply {

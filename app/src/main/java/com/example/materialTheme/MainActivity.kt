@@ -61,6 +61,6 @@ class MainActivity : AppCompatActivity() {
             .withMessage(R.string.banner_message)
             .withLeftButton(R.string.banner_cancel_button)
             .withRightButton(R.string.banner_ok_button)
-            .showError()
+            .showOk()
     }
 }
