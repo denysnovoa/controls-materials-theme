@@ -11,7 +11,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        style="@style/TextStyle.Subhead"/>
 
     <Space
         android:layout_width="match_parent"
@@ -29,10 +30,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_material_outline"
-        style="@style/ButtonStyle.Outline"
+        style="@style/ButtonStyle.Outline.Large"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button Outline" />
+        android:text="Button Outline Large" />
 
     <Space
         android:layout_width="match_parent"
