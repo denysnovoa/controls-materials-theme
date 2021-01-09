@@ -3,16 +3,19 @@ package com.example.materialTheme
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.materialTheme.controls.Badge
+import com.example.materialTheme.controls.MapMarker
 import com.example.materialTheme.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.bindChipGroupExtras()
+        binding.bindMarkerFavorite()
     }
 
     private fun ActivityMainBinding.bindChipGroupExtras() {
@@ -33,8 +36,18 @@ class MainActivity : AppCompatActivity() {
                 extra,
                 R.style.Badge
             ).also {
-               chipGroupExtras.addView(it)
+                chipGroupExtras.addView(it)
             }
         }
+    }
+
+    private fun ActivityMainBinding.bindMarkerFavorite() {
+        markerLayout.addView(
+            MapMarker.build(
+                this@MainActivity,
+                "498.000 €",
+                R.style.MapMarker_Favorite
+            )
+        )
     }
 }

@@ -62,6 +62,7 @@
         android:layout_height="16dp" />
 
     <LinearLayout
+        android:id="@+id/marker_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
