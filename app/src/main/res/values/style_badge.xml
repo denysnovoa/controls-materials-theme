@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Badge">
+        <item name="android:gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:minWidth">24dp</item>
+        <item name="android:textAppearance">@style/TextStyle.Link2</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:background">?colorSurface</item>
+    </style>
+
+    <style name="Badge.Top" parent="Badge">
+        <item name="badgeIconTint">?colorOnSurface</item>
+        <item name="android:background">?colorSurface</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="Badge.Opportunity" parent="Badge">
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:background">?colorSecondaryVariant</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="Badge.NewConstruction" parent="Badge">
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:background">?colorSurface</item>
+        <item name="textAllCaps">true</item>
+    </style>
+</resources>
