@@ -105,4 +105,23 @@
         app:chipSpacingVertical="8dp"
         />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <TextView
+        style="@style/TextStyle.Subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banner" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <com.example.materialTheme.controls.Banner
+        android:id="@+id/banner_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>

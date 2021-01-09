@@ -2,7 +2,6 @@ package com.example.materialTheme.extensions
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.content.Context
 import android.view.View
 import androidx.core.animation.doOnEnd
 import androidx.core.animation.doOnStart

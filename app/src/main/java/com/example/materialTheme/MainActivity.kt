@@ -3,6 +3,7 @@ package com.example.materialTheme
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.materialTheme.controls.Badge
+import com.example.materialTheme.controls.Banner
 import com.example.materialTheme.controls.MapMarker
 import com.example.materialTheme.databinding.ActivityMainBinding
 
@@ -14,8 +15,11 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bindChipGroupExtras()
-        binding.bindMarkerFavorite()
+        binding.apply {
+            bindChipGroupExtras()
+            bindMarkerFavorite()
+            bindBanner()
+        }
     }
 
     private fun ActivityMainBinding.bindChipGroupExtras() {
@@ -49,5 +53,14 @@ class MainActivity : AppCompatActivity() {
                 R.style.MapMarker_Favorite
             )
         )
+    }
+
+    private fun ActivityMainBinding.bindBanner() {
+        Banner.Builder(bannerFeedback)
+            .withTitle(R.string.banner_title)
+            .withMessage(R.string.banner_message)
+            .withLeftButton(R.string.banner_cancel_button)
+            .withRightButton(R.string.banner_ok_button)
+            .showOk(true)
     }
 }

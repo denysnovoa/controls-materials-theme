@@ -76,7 +76,7 @@ class Banner @JvmOverloads constructor(
 
         dismissing = true
 
-        reduce(context, onFinish = onDismiss)
+        reduce(onFinish = onDismiss)
     }
 
     override fun cancel() {
@@ -93,7 +93,7 @@ class Banner @JvmOverloads constructor(
             lastShownTime = System.currentTimeMillis()
             expand().apply {
                 if (hideAfter) {
-                    playSequentially(reduce(context, DELAY_MILLIS, onFinish = onDismiss))
+                    playSequentially(reduce(DELAY_MILLIS, onFinish = onDismiss))
                 }
             }
         }

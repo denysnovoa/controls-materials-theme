@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="banner_title">Materials Banner Title</string>
+    <string name="banner_message">Materials Banner Message</string>
+    <string name="banner_cancel_button">No, gracias</string>
+    <string name="banner_ok_button">Entendido</string>
+</resources>
