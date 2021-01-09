@@ -17,11 +17,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_material_base"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button Base Theme"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_material_outline"
+        style="@style/ButtonStyle.Outline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button Outline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_material_base" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,8 +9,15 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
+
+        <item name="colorError">@color/palette_red_light</item>
+        <item name="colorErrorSurface">@color/palette_red_dark</item>
+        <item name="colorOnErrorSurface">@color/white</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="android:buttonStyle">@style/ButtonStyle.Filled</item>
     </style>
 </resources>
