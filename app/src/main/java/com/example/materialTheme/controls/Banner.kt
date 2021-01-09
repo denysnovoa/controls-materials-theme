@@ -123,8 +123,7 @@ class Banner @JvmOverloads constructor(
             .setBottomLeftCorner(CornerFamily.ROUNDED, dpToPx(16).toFloat())
             .build()
 
-        val materialDrawable = MaterialShapeDrawable(shapeAppearanceModel)
-        ViewCompat.setBackground(this, materialDrawable)
+        ViewCompat.setBackground(this, MaterialShapeDrawable(shapeAppearanceModel))
     }
 
     class Builder(private val banner: Banner) {
