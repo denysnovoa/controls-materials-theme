@@ -14,4 +14,11 @@
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">20sp</item>
     </style>
+
+    <style name="TextStyle.Caption2"
+        parent="TextStyle">
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">13sp</item>
+    </style>
 </resources>

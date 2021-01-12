@@ -1,149 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    tools:ignore="HardcodedText">
+    android:layout_height="match_parent">
 
-    <TextView
-        style="@style/TextStyle.Subhead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
-    <Space
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="16dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        tools:ignore="HardcodedText">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_material_base"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button Base Theme" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_material_outline"
-        style="@style/ButtonStyle.Outline.Large"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button Outline Large" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_material_outline_large"
-        style="@style/ButtonStyle.Flat.Icon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button Flat + Icon"
-        app:icon="@drawable/abc_vector_test" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <TextView
-        style="@style/TextStyle.Subhead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Marker" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <LinearLayout
-        android:id="@+id/marker_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        <TextView
+            style="@style/TextStyle.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
 
         <Space
-            android:layout_width="8dp"
-            android:layout_height="match_parent" />
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
 
-        <com.example.materialTheme.controls.MapMarker
-            android:id="@+id/markerPrimary"
-            style="@style/MapMarker"
-            android:text="498.000 €" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_material_base"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button Base Theme" />
 
         <Space
-            android:layout_width="8dp"
-            android:layout_height="match_parent" />
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
 
-        <com.example.materialTheme.controls.MapMarker
-            android:id="@+id/markerFavorite"
-            style="@style/MapMarker.Selected"
-            android:text="398.000 €" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_material_outline"
+            style="@style/ButtonStyle.Outline.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button Outline Large" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_material_outline_large"
+            style="@style/ButtonStyle.Flat.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button Flat + Icon"
+            app:icon="@drawable/abc_vector_test" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_material_outline_large_icon_top"
+            style="@style/ButtonStyle.Floating"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="?colorSurface"
+            android:drawableTop="@drawable/abc_vector_test"
+            android:text="Button" />
+
+        <TextView
+            style="@style/TextStyle.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marker" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <LinearLayout
+            android:id="@+id/marker_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <com.example.materialTheme.controls.MapMarker
+                android:id="@+id/markerPrimary"
+                style="@style/MapMarker"
+                android:text="498.000 €" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <com.example.materialTheme.controls.MapMarker
+                android:id="@+id/markerFavorite"
+                style="@style/MapMarker.Selected"
+                android:text="398.000 €" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextStyle.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chips" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_extras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:chipSpacingVertical="8dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TextView
+            style="@style/TextStyle.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Banner" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <com.example.materialTheme.controls.Banner
+            android:id="@+id/banner_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TextView
+            style="@style/TextStyle.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rounded Image" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            style="@style/Widget.Image.Avatar"
+            android:layout_width="@dimen/size56"
+            android:layout_height="@dimen/size56"
+            android:background="?colorSecondary"
+            android:contentDescription="Imagen"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
     </LinearLayout>
-
-    <TextView
-        style="@style/TextStyle.Subhead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chips" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chip_group_extras"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:chipSpacingVertical="8dp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <TextView
-        style="@style/TextStyle.Subhead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Banner" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <com.example.materialTheme.controls.Banner
-        android:id="@+id/banner_feedback"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <TextView
-        style="@style/TextStyle.Subhead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rounded Image" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        style="@style/Widget.Image.Avatar"
-        android:layout_width="@dimen/size56"
-        android:layout_height="@dimen/size56"
-        android:background="?colorSecondary"
-        android:contentDescription="Imagen"
-        android:src="@drawable/ic_launcher_foreground" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>
