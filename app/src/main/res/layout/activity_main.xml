@@ -142,4 +142,8 @@
         android:background="?colorSecondary"
         android:contentDescription="Imagen"
         android:src="@drawable/ic_launcher_foreground" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
 </LinearLayout>
