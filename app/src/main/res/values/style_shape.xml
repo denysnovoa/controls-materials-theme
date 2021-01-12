@@ -22,4 +22,14 @@
         <item name="cornerRadius">32dp</item>
     </style>
 
+    <style name="Widget.Image.Avatar"
+        parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium.Avatar</item>
+    </style>
+
+    <style name="ShapeAppearance.Medium.Avatar"
+        parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
